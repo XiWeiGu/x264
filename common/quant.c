@@ -853,6 +853,9 @@ void x264_quant_init( x264_t *h, uint32_t cpu, x264_quant_function_t *pf )
         pf->coeff_last[ DCT_LUMA_AC] = x264_coeff_last15_lsx;
         pf->coeff_last[DCT_LUMA_4x4] = x264_coeff_last16_lsx;
         pf->coeff_last[DCT_LUMA_8x8] = x264_coeff_last64_lsx;
+        pf->coeff_level_run8         = x264_coeff_level_run8_lsx;
+        pf->coeff_level_run[ DCT_LUMA_AC] = x264_coeff_level_run15_lsx;
+        pf->coeff_level_run[DCT_LUMA_4x4] = x264_coeff_level_run16_lsx;
     }
     if( cpu&X264_CPU_LASX )
     {
@@ -863,6 +866,8 @@ void x264_quant_init( x264_t *h, uint32_t cpu, x264_quant_function_t *pf )
         pf->coeff_last[ DCT_LUMA_AC] = x264_coeff_last15_lasx;
         pf->coeff_last[DCT_LUMA_4x4] = x264_coeff_last16_lasx;
         pf->coeff_last[DCT_LUMA_8x8] = x264_coeff_last64_lasx;
+        pf->coeff_level_run[ DCT_LUMA_AC] = x264_coeff_level_run15_lasx;
+        pf->coeff_level_run[DCT_LUMA_4x4] = x264_coeff_level_run16_lasx;
     }
 #endif
 
