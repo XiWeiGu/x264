@@ -131,6 +131,14 @@ ASM_PREF\name: ;
 #define f29 $f29
 #define f30 $f30
 #define f31 $f31
+#define fs0 $fs0
+#define fs1 $fs1
+#define fs2 $fs2
+#define fs3 $fs3
+#define fs4 $fs4
+#define fs5 $fs5
+#define fs6 $fs6
+#define fs7 $fs7
 
 #define vr0 $vr0
 #define vr1 $vr1

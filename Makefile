@@ -230,6 +230,7 @@ OBJASM += $(SRCASM_X:%.S=%-10.o)
 endif
 
 endif
+OBJCHK += tools/checkasm-loongarch.o
 endif
 
 endif
